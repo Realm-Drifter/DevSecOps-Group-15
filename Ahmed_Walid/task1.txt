@@ -17,7 +17,7 @@ Design Exercise Answers (gha-calculator)
 4) Run tests (pytest)
 
 4. Artifact:
-A Docker image stored in a container registry as in Docker Hub .
+The single deployable artifact for this project is a **Docker image** containing the Python web API application, its runtime, and all dependencies. It is pushed to and stored in a container registry (such as GitHub Container Registry or Docker Hub) .
 
 5. Environments:
 - Environments: Staging and Production.
