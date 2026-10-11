@@ -1,0 +1,28 @@
+Design Exercise Answers (gha-calculator)
+
+1. Triggers:
+- PRs to main: Runs linting, tests, and security scans.
+- Pushes to main: Triggers full build and staging deployment.
+- Release tags (e.g., v1.0.0): Triggers production deployment.
+
+2. Jobs:
+- Jobs: lint, test, security-scan, build-and-push, deploy.
+- Parallel: lint, test, security-scan run at the same time.
+- Sequential: build-and-push waits for all CI jobs to pass; deploy waits for build-and-push.
+
+3. Test Job Steps:
+1) Checkout code (actions/checkout)
+2) Set up Python (actions/setup-python)
+3) Install dependencies (pip install -r requirements.txt)
+4) Run tests (pytest)
+
+4. Artifact:
+A Docker image stored in a container registry as in Docker Hub .
+
+5. Environments:
+- Environments: Staging and Production.
+- Manual Approval: Production needs human approval.
+
+6. Fail Fast:
+- First Job: lint.
+- Why: It catches basic syntax/formatting errors in seconds without wasting time or compute resources on heavier jobs.
