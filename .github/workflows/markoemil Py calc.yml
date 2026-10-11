@@ -13,4 +13,4 @@ jobs:
         with:
           python-version: '3.13'
       - name: Run calculator
-        run: python3 "Marko Emil"/calculator.py
+        run: python3 "Marko Emil"/Calculator.py
