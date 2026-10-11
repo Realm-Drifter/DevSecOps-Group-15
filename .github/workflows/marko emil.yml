@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        uses: action
+        uses: actions/checkout@v4
       
       - name: simple Echo hello
         run: echo "Hello from ${{ inputs.environment}}"
