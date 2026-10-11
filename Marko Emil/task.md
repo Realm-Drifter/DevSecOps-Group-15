@@ -21,4 +21,4 @@
 
 5- first environment that should pass thro is dev then staging which needs no human approval and final one production and this one does need a human approval yes 
 
-6- linting runs first to check for style or syntax errors 
+6- linting then unit tests and bulding images
