@@ -1,0 +1,30 @@
+name: github-actions
+run-name: ${{ github.actor }} Running GitHub Actions
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+    inputs: 
+      environment:
+        description: " pick an environment"
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+        default: dev
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: action
+      
+      - name: simple Echo hello
+        run: echo "Hello from ${{ inputs.environment}}"
+      
+      - name: Cat a file
+        run: cat README.md
