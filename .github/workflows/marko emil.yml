@@ -20,12 +20,13 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - name: simple LS
-        run: ls -l
 
       - name: checkout code
         uses: actions/checkout@v4
-      
+
+      - name: simple LS
+        run: ls -l
+
       - name: simple Echo hello
         run: echo "Hello from ${{ inputs.environment}}"
       
