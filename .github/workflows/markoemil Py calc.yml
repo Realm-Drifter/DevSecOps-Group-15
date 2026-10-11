@@ -2,7 +2,7 @@ name: learn-github-actions
 run-name: ${{ github.actor }} running a Calc on GitHub Actions
 on: 
     push:
-        branches: [main]
+        branches: [main, feature/update-calc]
     workflow_dispatch:
 jobs:
   run-calc:
